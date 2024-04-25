@@ -1,4 +1,4 @@
-async function getMunicipios(UF) {
+async function getEstados(UF) {
     try {
       const data = await fetch(`https://servicodados.ibge.gov.br/api/v1/localidades/estados${UF}`)
   
@@ -16,10 +16,10 @@ async function getMunicipios(UF) {
     }
     const urlSearchParams = new URLSearchParams(location.search)
 
-    const municipiosUF = urlSearchParams.get('UF')
+    const estadosUF = urlSearchParams.get('UF')
   
-    changePageTitle(`Pagina do ${municipiosUF}`)
-    getPokemonData(municipiosUF)
+    changePageTitle(`Pagina do ${estadosUF}`)
+    getestadosUF(estadosUF)
   }
   
   document.addEventListener('DOMContentLoaded', function () {

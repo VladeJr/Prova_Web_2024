@@ -1,6 +1,6 @@
 async function getMunicipios(UF) {
     try {
-      const data = await fetch(`https://servicodados.ibge.gov.br/api/v1/localidades/estados/{UF}/distritos/${UF}`)
+      const data = await fetch(`https://servicodados.ibge.gov.br/api/v1/localidades/estados/{UF}/municipios${UF}`)
   
       const jsonData = await data.json()
   
